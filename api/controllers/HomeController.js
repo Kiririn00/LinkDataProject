@@ -7,13 +7,56 @@ module.exports = {
   index: function (req, res) {
     //return res.send("Hi there! 2");
     return res.view();
+
   },
 
   //this is function for test form by using sails
   Form: function (req, res) {
 
-    req.param('username');
+    if(req.method=='POST') {
+      //get post data
+      var username = req.param('username');
+      var password = req.param('password');
+      var email = req.param('email');
 
+      //set PREFIX for query in fuseki
+      /*
+       var prefix_user = 'http://testproject.com/user#';
+       var prefix_data = 'http://testproject.com/data#';
+       */
+
+      /*
+      // endpoint in fuseki
+      var endpoint = '/update';
+
+      //send data to fuseki for insert
+      var fuseki = 'http://localhost:3030/';  // FusekiサーバのURL
+      var dataset_name = 'Vlet-persistent'; // dataset名
+      var fuseki_endpoint = fuseki + dataset_name + endpoint; // Fusekiサーバのエンドポイント（SPARQLクエリを投げる時のURL）
+
+      //query text
+      var query = 'PREFIX user: <http://testproject.com/user#>\n' +
+        'PREFIX data: <http://testproject.com/data#>\n' +
+        'INSERT DATA{\n' +
+        'user:varit data:email "chinghaha1@hotmail.com"\n' +
+        '}';
+
+      //use ajax for send data to fuseki
+      $.ajax({
+        url: fuseki_endpoint,
+        type: 'GET',
+        query: query,
+        output: 'json'
+      }).done(function (result) {
+        console.log(result);
+      }).fail(function (error) {
+        console.log(error);
+      });
+      */
+      console.log(username, email, password);
+
+
+    }//end if post
     return res.view();
   },
 
