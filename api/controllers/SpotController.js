@@ -15,15 +15,15 @@ module.exports = {
 
   Home: function (req,res){
 
+
+    res.locals.layout = 'layout2';
+    return res.view();
   },
 
   ShowSopt: function (req,res){
 
   },
 
-  Login : function (req,res){
-
-  },
 
   SearchResult : function (){
 
@@ -34,54 +34,7 @@ module.exports = {
   },
 
   //this is function for test form by using sails
-  Form: function (req, res) {
 
-    if(req.method=='POST') {
-
-      //set name of dataset that will INSERT
-      var dataset = 'users';
-      //set SPARQL that will query by Fuseki
-      var postData = 'PREFIX user: <http://testproject.com/user#>\n' +
-        'PREFIX data: <http://testproject.com/data#>\n' +
-        'INSERT DATA{\n' +
-        'user:test data:test "testhhkk"\n' +
-        '}';
-      //what wii send and what will set in header and body of HTTP POST REQUEST
-      var options = {
-        hostname: 'localhost',
-        port: 3030,
-        path: '/users/update',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/sparql-update',
-          'Content-Length': postData.length
-        }
-      };
-      //send http request to Fuseki
-      var req = http.request(options, function (res) {
-        console.log('STATUS: ' + res.statusCode);
-        console.log('HEADERS: ' + JSON.stringify(res.headers));
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-          console.log('BODY: ' + chunk);
-        });
-        res.on('end', function () {
-          console.log('No more data in response.')
-        })
-      });
-      //if error for send HTTP request
-      req.on('error', function (e) {
-        console.log('problem with request: ' + e.message);
-      });
-
-      // write data to request body
-      req.write(postData);
-      req.end();
-    }//end if post
-
-    //show view
-    return res.view();
-  },
 
   //this is function for testing FB API(not relative with research project)
   FbMessage: function (req,res){
