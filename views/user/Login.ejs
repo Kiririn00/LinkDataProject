@@ -1,8 +1,7 @@
-
-
+<!-- this is view Login.ejs  -->
 <div class="container">
   <h2>Login Form</h2>
-  <form role="form" method="post">
+  <form role="form" method="post" action="/User/Process">
 
     <div class="form-group">
       <label for="username">Username</label>
@@ -12,7 +11,6 @@
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" name="password" id="pwd">
     </div>
-
 
     <button type="submit" class="btn btn-default">Login</button>
     <button type="reset" class="btn btn-default">Reset</button>

@@ -7,7 +7,6 @@ var http = require('http');
 module.exports = {
 
   index: function (req, res) {
-    //return res.send("Hi there! 2");
 
     return res.view();
 
@@ -15,7 +14,7 @@ module.exports = {
 
   Home: function (req,res){
 
-
+    //special layout for home.ejs
     res.locals.layout = 'layout2';
     return res.view();
   },

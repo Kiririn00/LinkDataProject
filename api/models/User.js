@@ -4,7 +4,7 @@
 /**
  * User.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @description :: This is User Model
  * @docs        :: http://sailsjs.org/documentation/concepts/ORM/Models.html
  */
 
@@ -22,7 +22,8 @@ module.exports = {
       size: 200
     },
     password:{
-      type: 'string'
+      type: 'string',
+      size: 200
     },
     email: {
       type: 'string'

@@ -13,55 +13,78 @@ module.exports = {
   Login : function (req,res){
 
     return res.view();
+
+  },
+
+  Process: function (req,res){
+
+      //create value, prepare for input data from mySQL
+      var username_DB;
+      var password_DB;
+      //get post data from view
+      var username_view = req.param('username');
+      var password_view = req.param('password');
+
+      //callback: get DB data
+      function receive_data(){
+
+        console.log(username_view);
+        console.log(password_view);
+
+      }//end function callback
+
+      function redirect(){
+
+      }
+
+      //login check
+      User.find({}).exec(function find(err, found){
+
+        for(var i=0 ; i< found.length ; i++) { //loop for many record
+
+          //put mySQL data record to value
+          var data_result = receive_data();
+
+          // if username and password from view are the same in mySQL
+          if(username_view == found[i].username && password_view == found[i].password ) {
+            console.log("Login Complete");
+            return res.redirect('/Spot/Home');
+          }
+          else{
+            console.log("Login Failed");
+            //just do noting
+          }//end else
+
+        }//end for loop
+
+        redirect();
+        return res.redirect('User/Login');
+      });//end exec
+
+
   },
 
   Register: function (req, res) {
 
+    //check if post data had request
     if(req.method=='POST') {
+      //get post data from view
+      var username = req.param('username');
+      var password = req.param('password');
+      var email = req.param('email');
 
-      //set name of dataset that will INSERT
-      var dataset = 'users';
-      //set SPARQL that will query by Fuseki
-      var postData = 'PREFIX user: <http://testproject.com/user#>\n' +
-        'PREFIX data: <http://testproject.com/data#>\n' +
-        'INSERT DATA{\n' +
-        'user:test data:test "testhhkk"\n' +
-        '}';
-      //what wii send and what will set in header and body of HTTP POST REQUEST
-      var options = {
-        hostname: 'localhost',
-        port: 3030,
-        path: '/users/update',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/sparql-update',
-          'Content-Length': postData.length
-        }
-      };
-      //send http request to Fuseki
-      var req = http.request(options, function (res) {
-        console.log('STATUS: ' + res.statusCode);
-        console.log('HEADERS: ' + JSON.stringify(res.headers));
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-          console.log('BODY: ' + chunk);
-        });
-        res.on('end', function () {
-          console.log('No more data in response.')
-        })
-      });
-      //if error for send HTTP request
-      req.on('error', function (e) {
-        console.log('problem with request: ' + e.message);
+      //INSERT new data to mySQL
+      User.create({
+        username: username,
+        password: password,
+        email: email
+      }).exec(function CreateData(err,created){
+        console.log('create data:'+ created.username);
       });
 
-      // write data to request body
-      req.write(postData);
-      req.end();
     }//end if post
 
-    //show view
-
+    //render view
     return res.view();
   }
 };
