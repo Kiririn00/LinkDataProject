@@ -23,9 +23,28 @@ module.exports = {
 
   },
 
+  SearchResult : function (req,res){
+    //if post data come
+    if(req.method == 'POST') {
+      //get post data will use as tree attribute
+      var type = req.param("type");
+      var category = req.param("category");
+      var good_for = req.param("good_for");
 
-  SearchResult : function (){
+      //debug post data
+      console.log("POST DATA:"+type+" "+category+" "+good_for);
 
+      //decision tree algorithm
+
+      //node1(attribute1)
+      if(type==""){
+
+      }
+
+    }
+
+
+    return res.view();
   },
 
   AddSpot : function (){

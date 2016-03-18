@@ -1,7 +1,4 @@
 
-
-<body>
-
 <!-- Nav Menu End-->
 
 <!-- Image Cover Start-->
@@ -10,7 +7,6 @@
     <img src="/images/shiga.jpg">
   </div>
 </div>
-
 <!-- Image Cover End-->
 
 <!-- Column Left Start-->
@@ -93,39 +89,34 @@
 
 <!-- Posts Start-->
 <div class="galery">
+
+  <!-- Search Form -->
   <div class="container">
-    <div class="author"><span>Author</span></div>
-    <div class="date"><span>Saturday, July 26, 2014</span></div>
-
-    <div class="thumb">
-      <a href="">
-        <div class="overlay"></div>
-        <img src="http://s26.postimg.org/ccf2te9ex/image.jpg"/>
-      </a>
-    </div>
-
-    <div class="snippet">
-      <a href=""><h3>Simple Design</h3></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis leo ac ante tincidunt, nec sagittis neque vehicula. Morbi eu sodales lacus. Aliquam facilisis et dolor id tristique. Morbi aliquam facilisis ligula, vitae suscipit ligula malesuada ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id pharetra odio, at placerat nisl. Curabitur tempus condimentum mattis. Integer eget mi vel magna venenatis ultricies sit amet vel dui. Vestibulum turpis ante, volutpat a bibendum sed, consequat ac purus.</p>
-      <p><i class="icon-ellipsis"></i></p>
-      <hr class="dotted"/>
-      <p><a href="" class="tooltip-right" data-hint="Read More">Read More</a></p>
-      <div class="tag-line"><i class="fa fa-tag"></i><span class="meta"> Tags:</span><span class="tags"><a href="">Lorem ipsum</a><a href="">Lorem ipsum</a><a href="">Lorem ipsum</a></span></div>
-    </div>
-    <div class="actions">
-      <ul>
-        <li><i class="fa fa-comment"></i><a href="" class="tooltip-left" data-hint="Comments"> Comments</a></li>
-      </ul>
-      <ul class="flip">
-        <li class="nav-meta">Share:</li>
-        <li><a href="" class="tooltip-top" data-hint="Like"><i class="fa fa-facebook"></i> Like</a></li>
-        <li><a href="" class="tooltip-top" data-hint="Tweet"><i class="fa fa-twitter"></i> Tweet</a></li>
-      </ul>
+    <div class="form-group">
+      <h2>Search Spot</h2>
+      <form action="/Spot/SearchResult" method="post">
+        <label for="type">Type</label>
+        <select name="type">
+          <option name="0" value="walking_travel">Walking-Travel</option>
+          <option name="1" value="exploration">Exploration</option>
+        </select>
+        <label for="category">Category</label>
+        <select name="category">
+          <option name="0" value="recreational">Recreational</option>
+          <option name="1" value="national">National</option>
+        </select>
+        <label for="good_for">Good For</label>
+        <select name="good_for">
+          <option name="0" value="family">Family</option>
+          <option name="1" value="one_man">One-Man</option>
+          <option name="2" value="couple">Couple</option>
+        </select>
+        <input type="submit">
+      </form>
     </div>
   </div>
-</div>
+  <!-- Search Form End -->
 
-</div>
 </div>
 
 <div class="galery">
@@ -161,8 +152,6 @@
   </div>
 </div>
 
-</div>
-</div>
 
 <div class="galery">
   <div class="container">
@@ -197,8 +186,6 @@
   </div>
 </div>
 
-</div>
-</div>
 
 <div class="galery">
   <div class="container">
@@ -233,11 +220,41 @@
   </div>
 </div>
 
-</div>
+
+<div class="galery">
+  <div class="container">
+    <div class="author"><span>Author</span></div>
+    <div class="date"><span>Saturday, July 26, 2014</span></div>
+
+    <div class="thumb">
+      <a href="">
+        <div class="overlay"></div>
+        <img src="http://s26.postimg.org/ccf2te9ex/image.jpg"/>
+      </a>
+    </div>
+
+    <div class="snippet">
+      <a href=""><h3>Simple Design</h3></a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis leo ac ante tincidunt, nec sagittis neque vehicula. Morbi eu sodales lacus. Aliquam facilisis et dolor id tristique. Morbi aliquam facilisis ligula, vitae suscipit ligula malesuada ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id pharetra odio, at placerat nisl. Curabitur tempus condimentum mattis. Integer eget mi vel magna venenatis ultricies sit amet vel dui. Vestibulum turpis ante, volutpat a bibendum sed, consequat ac purus.</p>
+      <p><i class="icon-ellipsis"></i></p>
+      <hr class="dotted"/>
+      <p><a href="" class="tooltip-right" data-hint="Read More">Read More</a></p>
+      <div class="tag-line"><i class="fa fa-tag"></i><span class="meta"> Tags:</span><span class="tags"><a href="">Lorem ipsum</a><a href="">Lorem ipsum</a><a href="">Lorem ipsum</a></span></div>
+    </div>
+    <div class="actions">
+      <ul>
+        <li><i class="fa fa-comment"></i><a href="" class="tooltip-left" data-hint="Comments"> Comments</a></li>
+      </ul>
+      <ul class="flip">
+        <li class="nav-meta">Share:</li>
+        <li><a href="" class="tooltip-top" data-hint="Like"><i class="fa fa-facebook"></i> Like</a></li>
+        <li><a href="" class="tooltip-top" data-hint="Tweet"><i class="fa fa-twitter"></i> Tweet</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-</div>
-</div>
+
 <!-- Posts End -->
 
 <!-- Bottom Navigation Start -->
@@ -248,7 +265,7 @@
   </ul>
 </div>
 <!-- Bottom Navigation Start -->
-</div>
+
 
 <!-- Scroll Top -->
 <div class="scroll-top"><a href="#top" class="scroll tooltip-left" data-hint="Scroll to Top"><i class="fa fa-angle-up fa-2x"></i></a></div>
@@ -266,5 +283,3 @@
   });
 </script>
 <div class='follow-me'>Follow me on <a href="https://twitter.com/jamil_alien" target="_blanck" class="tooltip-left" data-hint="Follow me">Twitter</a></div>
-</body>
-</html>

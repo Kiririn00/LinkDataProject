@@ -15,7 +15,7 @@ module.exports = {
     return res.view();
 
   },
-
+  //this action is for make login process
   Process: function (req,res){
 
       //create value, prepare for input data from mySQL
@@ -57,7 +57,7 @@ module.exports = {
 
         }//end for loop
 
-        redirect();
+        //redirect();
         return res.redirect('User/Login');
       });//end exec
 
