@@ -80,7 +80,7 @@ module.exports = {
         else{//error in layer 2
 
         }
-      }
+      }//end if type==0
 
       else if(type == 1){// node layer 1 case 2
         ati1 = 1;
@@ -128,15 +128,54 @@ module.exports = {
       else{//error in layer 1
 
       }
+
       console.log("attribute: "+ati1+" "+ati2+" "+ati3);//debug attributes
       console.log("answer case:"+ans_case);
       //--------------- end decision tree algorithm---------------------------------------//
 
+      //find content by SPARQL
+      var query = "PREFIX ab: <http://ldp.com/spot/category/> \n "+
+        "SELECT ?object \n "+"WHERE {?subject ab:spot_name ?object}";
+      var output = "output=json";
 
+      var options ={
+        url: 'http://localhost:3030/Spot/query?query='+query+'&'+output
+      };
+      //debug URL that will send to fuseki2
+      console.log(options);
+
+      //callback function
+      var result = [];
+      //callback function
+      function callback (callback_data){
+        console.log(callback_data);
+        return callback_data;
+      }
+
+      //open I/O send data to fuseki2
+      request(options, function http_re (error, response , body){
+        if(!error && response.statusCode == 200){//no HTTP error case
+          result = body;
+          result = callback(result);
+          console.log("Fuseki2 result: \n"+result);//debug response from fuseki2
+          return result;
+        }
+        else{//HTTP Error
+          console.log("HTTP Error: "+response.statusCode);//debug HTTP error code
+          console.log("Fuseki2 result: "+body);//debug error result from fuseki2
+        }
+
+      });
 
     }//end if post
 
-    return res.view();
+
+    var result_f = callback();
+    //console.log(result_f);
+
+    return res.view({
+      result: result_f
+    });
   },
 
   AddSpot : function (){
@@ -199,10 +238,10 @@ module.exports = {
     var options = {
       url: 'http://localhost:3030/Jena-Tutorial-persistent/query?query=SELECT ?s ?p ?o\n' // \n は改行を表す
       + 'WHERE {?s ?p ?o}&output=json',
-      query: 'SELECT ?s ?p ?o\n' // \n は改行を表す
-      + 'WHERE {?s ?p ?o}',
-      output: 'json',
-      method: "GET"
+      //query: 'SELECT ?s ?p ?o\n' // \n は改行を表す
+      //+ 'WHERE {?s ?p ?o}',
+      //output: 'json',
+      //method: "GET"
 
 
     };
