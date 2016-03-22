@@ -1,0 +1,13 @@
+<!--this is view -->
+
+<div class="container">
+  <h2>Search Result</h2>
+  <% result = JSON.parse(result);/*change JSON(form controller) to string*/ %>
+  <% var result_length = result.results.bindings.length;/* count object's bindings */ %>
+
+  <% for(var i=0;i<result_length;i++){/* for loop */%>
+  <%= result.results.bindings[i].object.value %><br/><!--show result data -->
+<%}%>
+</div>
+
+

@@ -146,36 +146,40 @@ module.exports = {
 
       //callback function
       var result = [];
+      var result_length = 0;
       //callback function
       function callback (callback_data){
-        console.log(callback_data);
+        //console.log(callback_data);
         return callback_data;
       }
 
       //open I/O send data to fuseki2
-      request(options, function http_re (error, response , body){
+      request(options, function(error, response , body){
         if(!error && response.statusCode == 200){//no HTTP error case
           result = body;
           result = callback(result);
           console.log("Fuseki2 result: \n"+result);//debug response from fuseki2
-          return result;
         }
         else{//HTTP Error
           console.log("HTTP Error: "+response.statusCode);//debug HTTP error code
           console.log("Fuseki2 result: "+body);//debug error result from fuseki2
         }
 
+        //result = JSON.parse(result);
+        //result_length = result.results.bindings.length;
+        //console.log(result.results.bindings.length);
+        return res.view({
+          result: result,
+          //result_length:result_length
+        });
       });
 
     }//end if post
+    else{//if POST data not come
+      res.redirect('/Spot/Home');
+    }
 
 
-    var result_f = callback();
-    //console.log(result_f);
-
-    return res.view({
-      result: result_f
-    });
   },
 
   AddSpot : function (){
