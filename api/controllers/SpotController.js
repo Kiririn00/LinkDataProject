@@ -2,6 +2,8 @@
 
 var request = require('request');
 var http = require('http');
+global.jQuery = require('jquery');
+
 
 
 module.exports = {
@@ -32,10 +34,17 @@ module.exports = {
       var good_for = req.param("good_for");
 
       var ati1 = 0,ati2 = 0,ati3 = 0;
+      var ati1_name,ati2_name,ati3_name;
       var ans_case = 0 ;
 
       //debug post data
       console.log("POST DATA:"+type+" "+category+" "+good_for);
+      //define type's name
+      var type_name = ["exploration","walking-travel"];
+      //define category's name
+      var category_name = ["recreational","national"];
+      //define good for's name
+      var good_for_name = ["family","one-man","couple"];
 
       //--------------------decision tree algorithm-------------------------------------------//
 
@@ -129,13 +138,25 @@ module.exports = {
 
       }
 
+      //get attribute result name
+      ati1_name = type_name[ati1];
+      ati2_name = category_name[ati2];
+      ati3_name = good_for_name[ati3];
+      //debug attribute and answer case
       console.log("attribute: "+ati1+" "+ati2+" "+ati3);//debug attributes
+      console.log("attribute name: "+ati1_name+" "+ati2_name+" "+ati3_name);
       console.log("answer case:"+ans_case);
+
       //--------------- end decision tree algorithm---------------------------------------//
 
       //find content by SPARQL
       var query = "PREFIX ab: <http://ldp.com/spot/category/> \n "+
-        "SELECT ?object \n "+"WHERE {?subject ab:spot_name ?object}";
+        "SELECT ?object \n "+
+        "WHERE {?subject ab:type '"+ati1_name+"'.\n"+
+        "?subject ab:group '"+ati2_name+"'.\n"+
+        "?subject ab:for '"+ati3_name+"'.\n"+
+        "?subject ab:spot_name ?object. \n"+
+        "?subject ?p ?object.}";
       var output = "output=json";
 
       var options ={
