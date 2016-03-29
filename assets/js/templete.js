@@ -26,7 +26,7 @@ $(document).ready(function() {
         // JavaScriptでは複数行にわたる文字列が定義できないので，文字列を + で連結する．
         query: 'SELECT ?s ?p ?o\n' // \n は改行を表す
         + 'WHERE {?s ?p ?o}',
-        // 結果のフォーマット．ここではJSON形式を指定する
+        // 結果のフォーマット．ここではJSON形式を指 定する
         output: 'json'
       }
     }).done(function(result) {

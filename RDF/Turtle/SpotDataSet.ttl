@@ -1,3 +1,5 @@
+#this is turtle file
+
 @prefix category: <http://ldp.com/spot/category/> .
 @prefix user:  <http://ldp.com/data/user/> .
 
@@ -5,44 +7,68 @@
 
 user:id01 category:type     "exploration" ;
         category:group      "recreational" ;
-		category:for     	"family" ;
+		    category:for     	  "family" ;
         category:spot_name  "hikone-cho" .
 
 user:id02 category:type     "exploration" ;
         category:group      "recreational" ;
-		category:for     	"one-man" ;
+		    category:for     	  "one-man" ;
         category:spot_name  "ishiyama-dera" .
 
 user:id03 category:type     "exploration" ;
         category:group      "recreational" ;
-		category:for     	"couple" ;
+	      category:for     	   "couple" ;
         category:spot_name  "shirahige-jinja" .
 
 #case type:exploration, group:national
 
 user:id04 category:type     "exploration" ;
         category:group      "national" ;
-		category:for     	"family" ;
+		    category:for     	  "family" ;
         category:spot_name  "kawachi-cave" .
 
 user:id05 category:type     "exploration" ;
         category:group      "national" ;
-		category:for     	"one-man" ;
+		    category:for     	  "one-man" ;
         category:spot_name  "anzuchi" .
 
 user:id06 category:type     "exploration" ;
         category:group      "national" ;
-		category:for     	"couple" ;
+		    category:for     	  "couple" ;
         category:spot_name  "biwako valley" .
 
+#case type:walking-travel, group:recreational
 
+user:id07 category:type     "walking-travel" ;
+        category:group      "recreational" ;
+        category:for        "family" ;
+        category:spot_name  "kurokabe square" .
 
-user:id07 category:type     "walking-Travel" ;
-		category:group      "recreational" ;
-		category:for     	"one-man" ;
-        category:spot_name  "otsu-cho" .
+user:id08 category:type     "walking-travel" ;
+        category:group      "recreational" ;
+        category:for        "one-man" ;
+        category:spot_name  "kaiyodo figure museum" .
 
-user:id08  category:type    "walking-Travel" ;
-		category:group      "national" ;
-		category:for     	"couple" ;
-        category:spot_name  "biwako Lake" .
+user:id09 category:type     "walking-travel" ;
+        category:group      "recreational" ;
+        category:for        "couple" ;
+        category:spot_name  "yumekyobashi road" .
+
+#case type:walking-travel, group:national
+
+user:id10 category:type     "walking-travel" ;
+        category:group      "national" ;
+        category:for        "family" ;
+        category:spot_name  "shizugatake" .
+
+user:id11 category:type     "walking-travel";
+        category:group      "national";
+        category:for        "one-man";
+        category:spot_name  "shizugatake".
+
+user:id12 category:type     "walking-Travel";
+        category:group      "national";
+        category:for        "one-man";
+        category:spot_name  "mikami-yama";
+
+#----------------------END---------------------------------------#
