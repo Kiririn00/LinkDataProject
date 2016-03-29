@@ -1,0 +1,48 @@
+@prefix category: <http://ldp.com/spot/category/> .
+@prefix user:  <http://ldp.com/data/user/> .
+
+# case type:exploration, group:recreational
+
+user:id01 category:type     "exploration" ;
+        category:group      "recreational" ;
+		category:for     	"family" ;
+        category:spot_name  "hikone-cho" .
+
+user:id02 category:type     "exploration" ;
+        category:group      "recreational" ;
+		category:for     	"one-man" ;
+        category:spot_name  "ishiyama-dera" .
+
+user:id03 category:type     "exploration" ;
+        category:group      "recreational" ;
+		category:for     	"couple" ;
+        category:spot_name  "shirahige-jinja" .
+
+#case type:exploration, group:national
+
+user:id04 category:type     "exploration" ;
+        category:group      "national" ;
+		category:for     	"family" ;
+        category:spot_name  "kawachi-cave" .
+
+user:id05 category:type     "exploration" ;
+        category:group      "national" ;
+		category:for     	"one-man" ;
+        category:spot_name  "anzuchi" .
+
+user:id06 category:type     "exploration" ;
+        category:group      "national" ;
+		category:for     	"couple" ;
+        category:spot_name  "biwako valley" .
+
+
+
+user:id07 category:type     "walking-Travel" ;
+		category:group      "recreational" ;
+		category:for     	"one-man" ;
+        category:spot_name  "otsu-cho" .
+
+user:id08  category:type    "walking-Travel" ;
+		category:group      "national" ;
+		category:for     	"couple" ;
+        category:spot_name  "biwako Lake" .
