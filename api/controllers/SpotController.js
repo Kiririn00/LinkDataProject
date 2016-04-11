@@ -203,6 +203,11 @@ module.exports = {
 
   },
 
+  SpotContents : function(){
+
+    return res.view();
+  },
+
   AddSpot : function (){
 
   },

@@ -3,72 +3,105 @@
 @prefix category: <http://ldp.com/spot/category/> .
 @prefix user:  <http://ldp.com/data/user/> .
 
+@prefix type: <http://ldp.com/spot/category/type/> .
+@prefix group: <http://ldp.com/spot/category/group/> .
+@prefix for: <http://ldp.com/spot/category/for/> .
+@prefix spot_name: <http://ldp.com/spot/spot_name/>.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix province: <http://www.province.com/> .
+
+#create class
+province:shiga rdf:type rdfs:Class .
+
 # case type:exploration, group:recreational
+spot_name:hikone-cho
+        category:type       type:exploration ;
+        category:group      group:recreational ;
+      	category:for     	  for:family ;
+        rdf:library         "Hikone-cho" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id01 category:type     "exploration" ;
-        category:group      "recreational" ;
-		    category:for     	  "family" ;
-        category:spot_name  "hikone-cho" .
+spot_name:ishiyama-dera
+        category:type       type:exploration ;
+        category:group      group:recreational ;
+		    category:for     	  for:one-man ;
+        rdf:library         "Ishiyama-dera" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id02 category:type     "exploration" ;
-        category:group      "recreational" ;
-		    category:for     	  "one-man" ;
-        category:spot_name  "ishiyama-dera" .
-
-user:id03 category:type     "exploration" ;
-        category:group      "recreational" ;
-	      category:for     	   "couple" ;
-        category:spot_name  "shirahige-jinja" .
+spot_name:shirahige-jinja
+        category:type       type:exploration ;
+        category:group      group:recreational ;
+	      category:for     	  for:couple ;
+        rdf:library         "Shirahige-jinja" ;
+        rdfs:subClassOf     province:shiga .
 
 #case type:exploration, group:national
+spot_name:kawachi-cave
+        category:type       type:exploration ;
+        category:group      group:national ;
+		    category:for     	  for:family ;
+        rdf:library         "Kawachi Cave" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id04 category:type     "exploration" ;
-        category:group      "national" ;
-		    category:for     	  "family" ;
-        category:spot_name  "kawachi-cave" .
+spot_name:anzuchi
+        category:type       type:exploration ;
+        category:group      group:national ;
+		    category:for     	  for:one-man ;
+        rdf:library         "Anzuchi" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id05 category:type     "exploration" ;
-        category:group      "national" ;
-		    category:for     	  "one-man" ;
-        category:spot_name  "anzuchi" .
-
-user:id06 category:type     "exploration" ;
-        category:group      "national" ;
-		    category:for     	  "couple" ;
-        category:spot_name  "biwako valley" .
+spot_name:biwako_valley
+        category:type       type:exploration ;
+        category:group      group:national ;
+		    category:for     	  for:couple ;
+        rdf:library         "Biwako Valley" ;
+        rdfs:subClassOf     province:shiga .
 
 #case type:walking-travel, group:recreational
+spot_name:kurokabe_square
+        category:type       type:walking-travel ;
+        category:group      group:recreational ;
+        category:for        for:family ;
+        rdf:library         "Kurokabe Square" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id07 category:type     "walking-travel" ;
-        category:group      "recreational" ;
-        category:for        "family" ;
-        category:spot_name  "kurokabe square" .
+spot_name:kaiyodo_figure_museum
+        category:type       type:walking-travel ;
+        category:group      group:recreational ;
+        category:for        for:one-man ;
+        rdf:library         "Kaiyodo Figure Museum" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id08 category:type     "walking-travel" ;
-        category:group      "recreational" ;
-        category:for        "one-man" ;
-        category:spot_name  "kaiyodo figure museum" .
-
-user:id09 category:type     "walking-travel" ;
-        category:group      "recreational" ;
-        category:for        "couple" ;
-        category:spot_name  "yumekyobashi road" .
+spot_name:yumekyobashi_road
+        category:type       type:walking-travel ;
+        category:group      group:recreational ;
+        category:for        for:couple ;
+        rdf:library         "Yumekyobashi Road" ;
+        rdfs:subClassOf     province:shiga .
 
 #case type:walking-travel, group:national
+spot_name:shizugatake
+        category:type       type:walking-travel ;
+        category:group      group:national ;
+        category:for        for:family ;
+        rdf:library         "Shizugatake" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id10 category:type     "walking-travel" ;
-        category:group      "national" ;
-        category:for        "family" ;
-        category:spot_name  "shizugatake" .
+spot_name:mikami-yama
+        category:type       type:walking-travel ;
+        category:group      group:national ;
+        category:for        for:one-man;
+        rdf:library         "Mikami-yama" ;
+        rdfs:subClassOf     province:shiga .
 
-user:id11 category:type     "walking-travel";
-        category:group      "national";
-        category:for        "one-man";
-        category:spot_name  "shizugatake".
-
-user:id12 category:type     "walking-Travel";
-        category:group      "national";
-        category:for        "one-man";
-        category:spot_name  "mikami-yama";
+spot_name:shatanigamine
+        category:type       type:walking-travel ;
+        category:group      group:national ;
+        category:for        for:one-man ;
+        rdf:library         "Shatanigamine" ;
+        rdfs:subClassOf     province:shiga .
 
 #----------------------END---------------------------------------#
