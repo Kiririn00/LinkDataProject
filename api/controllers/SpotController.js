@@ -150,13 +150,26 @@ module.exports = {
       //--------------- end decision tree algorithm---------------------------------------//
 
       //find content by SPARQL
-      var query = "PREFIX ab: <http://ldp.com/spot/category/> \n "+
+      var query = "prefix category: <http://ldp.com/spot/category/>\n"+
+        "prefix user:  <http://ldp.com/data/user/>\n"+
+
+        "prefix type: <http://ldp.com/spot/category/type/>\n"+
+        "prefix group: <http://ldp.com/spot/category/group/>\n"+
+        "prefix for: <http://ldp.com/spot/category/for/>\n"+
+        "prefix spot_name: <http://ldp.com/spot/spot_name/>\n"+
+
+        "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/>\n"+
+        "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/>\n"+
+
+        "prefix province: <http://www.province.com/>\n"+
+
         "SELECT ?object \n "+
-        "WHERE {?subject ab:type '"+ati1_name+"'.\n"+
-        "?subject ab:group '"+ati2_name+"'.\n"+
-        "?subject ab:for '"+ati3_name+"'.\n"+
-        "?subject ab:spot_name ?object. \n"+
-        "?subject ?p ?object.}";
+        "WHERE {?subject ?p ?object. \n" +
+        "?subject category:type type:"+ati1_name+".\n"+
+        "?subject category:group group:"+ati2_name+".\n"+
+        "?subject category:for for:"+ati3_name+".\n"+
+        "} \n"+
+        "LIMIT 25";
       var output = "output=json";
 
       var options ={
