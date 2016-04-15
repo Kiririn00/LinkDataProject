@@ -13,11 +13,15 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/>
 prefix province: <http://www.province.com/>
 
 
-SELECT ?object
+SELECT *
 WHERE {
-  ?subject ?p ?object.
+  ?subject ?p ?spotname.
   ?subject category:type type:exploration.
   ?subject category:group group:recreational.
   ?subject category:for for:family.
+  ?subject rdfs:label ?spotname.
+  FILTER (lang(?spotname) = "ja")
+
+
 }
 LIMIT 100
