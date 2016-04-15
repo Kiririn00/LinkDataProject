@@ -1,3 +1,4 @@
+
 prefix category: <http://ldp.com/spot/category/>
 prefix user:  <http://ldp.com/data/user/>
 
@@ -6,15 +7,17 @@ prefix group: <http://ldp.com/spot/category/group/>
 prefix for: <http://ldp.com/spot/category/for/>
 prefix spot_name: <http://ldp.com/spot/spot_name/>
 
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/>
 
 prefix province: <http://www.province.com/>
 
 
-SELECT *
+SELECT ?object
 WHERE {
-
   ?subject ?p ?object.
+  ?subject category:type type:exploration.
+  ?subject category:group group:recreational.
+  ?subject category:for for:family.
 }
-LIMIT 25
+LIMIT 100

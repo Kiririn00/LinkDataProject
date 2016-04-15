@@ -8,8 +8,8 @@
 @prefix for: <http://ldp.com/spot/category/for/> .
 @prefix spot_name: <http://ldp.com/spot/spot_name/>.
 
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
 
 @prefix province: <http://www.province.com/> .
 
@@ -29,7 +29,7 @@ spot_name:ishiyama-dera
         category:type       type:exploration ;
         category:group      group:recreational ;
 		    category:for     	  for:one-man ;
-        rdf:label           "Ishiyama-dera"@en ;
+        rdfs:label           "Ishiyama-dera"@en ;
         rdfs:label          "石山寺"@jp ;
         rdfs:range          province:shiga .
 
@@ -37,7 +37,7 @@ spot_name:shirahige-jinja
         category:type       type:exploration ;
         category:group      group:recreational ;
 	      category:for     	  for:couple ;
-        rdf:label           "Shirahige-jinja"@en ;
+        rdfs:label           "Shirahige-jinja"@en ;
         rdfs:label          "白髭神社"@jp ;
         rdfs:range          province:shiga .
 
@@ -46,7 +46,7 @@ spot_name:kawachi-cave
         category:type       type:exploration ;
         category:group      group:national ;
 		    category:for     	  for:family ;
-        rdf:label           "Kawachi Cave"@en ;
+        rdfs:label           "Kawachi Cave"@en ;
         rdfs:label          "川内風穴"@jp ;
         rdfs:range          province:shiga .
 
@@ -54,7 +54,7 @@ spot_name:anzuchi
         category:type       type:exploration ;
         category:group      group:national ;
 		    category:for     	  for:one-man ;
-        rdf:label           "Anzuchi"@en ;
+        rdfs:label           "Anzuchi"@en ;
         rdfs:label          "安土"@jp ;
         rdfs:range          province:shiga .
 
@@ -62,7 +62,7 @@ spot_name:biwako_valley
         category:type       type:exploration ;
         category:group      group:national ;
 		    category:for     	  for:couple ;
-        rdf:label           "Biwako Valley"@en ;
+        rdfs:label           "Biwako Valley"@en ;
         rdfs:label          "琵琶湖バレイ"@jp ;
         rdfs:range          province:shiga .
 
@@ -71,7 +71,7 @@ spot_name:kurokabe_square
         category:type       type:walking-travel ;
         category:group      group:recreational ;
         category:for        for:family ;
-        rdf:label           "Kurokabe Square"@en ;
+        rdfs:label           "Kurokabe Square"@en ;
         rdfs:label          "黒壁スクエア"@jp ;
         rdfs:range          province:shiga .
 
@@ -79,7 +79,7 @@ spot_name:kaiyodo_figure_museum
         category:type       type:walking-travel ;
         category:group      group:recreational ;
         category:for        for:one-man ;
-        rdf:label           "Kaiyodo Figure Museum"@en ;
+        rdfs:label           "Kaiyodo Figure Museum"@en ;
         rdfs:label          "海洋堂フィギュアミュージアム"@jp ;
         rdfs:range          province:shiga .
 
@@ -87,7 +87,7 @@ spot_name:yumekyobashi_road
         category:type       type:walking-travel ;
         category:group      group:recreational ;
         category:for        for:couple ;
-        rdf:label           "Yumekyobashi Castle Road"@en ;
+        rdfs:label           "Yumekyobashi Castle Road"@en ;
         rdfs:label          "夢京橋キャッスルロード"@jp ;
         rdfs:range          province:shiga .
 
@@ -96,7 +96,7 @@ spot_name:shizugatake
         category:type       type:walking-travel ;
         category:group      group:national ;
         category:for        for:family ;
-        rdf:label           "Shizugatake"@en ;
+        rdfs:label           "Shizugatake"@en ;
         rdfs:label          "賤ヶ岳"@jp ;
         rdfs:range          province:shiga .
 
@@ -104,7 +104,7 @@ spot_name:mikami-yama
         category:type       type:walking-travel ;
         category:group      group:national ;
         category:for        for:one-man;
-        rdf:label           "Mount Mikami"@en ;
+        rdfs:label           "Mount Mikami"@en ;
         rdfs:label          "三上山"@jp ;
         rdfs:range          province:shiga .
 
@@ -112,7 +112,7 @@ spot_name:shatanigamine
         category:type       type:walking-travel ;
         category:group      group:national ;
         category:for        for:one-man ;
-        rdf:label           "Shatanigamine"@en ;
+        rdfs:label           "Shatanigamine"@en ;
         rdfs:label          "蛇谷ヶ峰"@jp ;
         rdfs:range          province:shiga .
 
