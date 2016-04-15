@@ -30,7 +30,7 @@ spot_name:ishiyama-dera
         category:group      group:recreational ;
 		    category:for     	  for:one-man ;
         rdfs:label           "Ishiyama-dera"@en ;
-        rdfs:label          "石山寺"@jp ;
+        rdfs:label          "石山寺"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:shirahige-jinja
@@ -38,7 +38,7 @@ spot_name:shirahige-jinja
         category:group      group:recreational ;
 	      category:for     	  for:couple ;
         rdfs:label           "Shirahige-jinja"@en ;
-        rdfs:label          "白髭神社"@jp ;
+        rdfs:label          "白髭神社"@ja ;
         rdfs:range          province:shiga .
 
 #case type:exploration, group:national
@@ -47,7 +47,7 @@ spot_name:kawachi-cave
         category:group      group:national ;
 		    category:for     	  for:family ;
         rdfs:label           "Kawachi Cave"@en ;
-        rdfs:label          "川内風穴"@jp ;
+        rdfs:label          "川内風穴"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:anzuchi
@@ -55,7 +55,7 @@ spot_name:anzuchi
         category:group      group:national ;
 		    category:for     	  for:one-man ;
         rdfs:label           "Anzuchi"@en ;
-        rdfs:label          "安土"@jp ;
+        rdfs:label          "安土"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:biwako_valley
@@ -63,7 +63,7 @@ spot_name:biwako_valley
         category:group      group:national ;
 		    category:for     	  for:couple ;
         rdfs:label           "Biwako Valley"@en ;
-        rdfs:label          "琵琶湖バレイ"@jp ;
+        rdfs:label          "琵琶湖バレイ"@ja ;
         rdfs:range          province:shiga .
 
 #case type:walking-travel, group:recreational
@@ -72,7 +72,7 @@ spot_name:kurokabe_square
         category:group      group:recreational ;
         category:for        for:family ;
         rdfs:label           "Kurokabe Square"@en ;
-        rdfs:label          "黒壁スクエア"@jp ;
+        rdfs:label          "黒壁スクエア"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:kaiyodo_figure_museum
@@ -80,7 +80,7 @@ spot_name:kaiyodo_figure_museum
         category:group      group:recreational ;
         category:for        for:one-man ;
         rdfs:label           "Kaiyodo Figure Museum"@en ;
-        rdfs:label          "海洋堂フィギュアミュージアム"@jp ;
+        rdfs:label          "海洋堂フィギュアミュージアム"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:yumekyobashi_road
@@ -88,7 +88,7 @@ spot_name:yumekyobashi_road
         category:group      group:recreational ;
         category:for        for:couple ;
         rdfs:label           "Yumekyobashi Castle Road"@en ;
-        rdfs:label          "夢京橋キャッスルロード"@jp ;
+        rdfs:label          "夢京橋キャッスルロード"@ja ;
         rdfs:range          province:shiga .
 
 #case type:walking-travel, group:national
@@ -97,7 +97,7 @@ spot_name:shizugatake
         category:group      group:national ;
         category:for        for:family ;
         rdfs:label           "Shizugatake"@en ;
-        rdfs:label          "賤ヶ岳"@jp ;
+        rdfs:label          "賤ヶ岳"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:mikami-yama
@@ -105,7 +105,7 @@ spot_name:mikami-yama
         category:group      group:national ;
         category:for        for:one-man;
         rdfs:label           "Mount Mikami"@en ;
-        rdfs:label          "三上山"@jp ;
+        rdfs:label          "三上山"@ja ;
         rdfs:range          province:shiga .
 
 spot_name:shatanigamine
@@ -113,7 +113,7 @@ spot_name:shatanigamine
         category:group      group:national ;
         category:for        for:one-man ;
         rdfs:label           "Shatanigamine"@en ;
-        rdfs:label          "蛇谷ヶ峰"@jp ;
+        rdfs:label          "蛇谷ヶ峰"@ja ;
         rdfs:range          province:shiga .
 
 #----------------------END---------------------------------------#

@@ -163,11 +163,12 @@ module.exports = {
 
         "prefix province: <http://www.province.com/>\n"+
 
-        "SELECT ?object \n "+
-        "WHERE {?subject ?p ?object. \n" +
+        "SELECT ?spotname \n "+
+        "WHERE {?subject ?p ?spotname. \n" +
         "?subject category:type type:"+ati1_name+".\n"+
         "?subject category:group group:"+ati2_name+".\n"+
         "?subject category:for for:"+ati3_name+".\n"+
+        "FILTER (lang(?spotname) = 'ja')\n"+  
         "} \n"+
         "LIMIT 25";
       var output = "output=json";
